@@ -1,1 +1,15 @@
 @import '../theme/fonts/poppins.scss';
+
+ion-tab-bar {
+    position: absolute;
+    bottom: 0;
+    width: 90%;
+    --background: #242D3A;  /* fallback for old browsers */
+    align-self: center;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    font-family: "Poppins Light";
+    ion-tab-button {
+        --color: white !important;
+    }
+}
