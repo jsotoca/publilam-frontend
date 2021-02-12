@@ -1,0 +1,36 @@
+ion-list-header {
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--ion-color-tertiary);
+}
+
+ion-card {
+    background: #F7F8F1 !important;
+    border-radius: 15px !important;
+    padding: 10px;
+    box-shadow:none !important;
+    font-family: "Poppins Light";
+    font-size: 11px;
+    height: 140px;
+}
+
+ion-button {
+    background: var(--ion-color-tertiary);
+    color: whitesmoke;
+    border-radius: 5px;
+    text-transform: none;
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+ion-img {
+    height: 72px;
+    width: 72px;
+}

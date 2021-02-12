@@ -4,12 +4,13 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { AdsMainComponent } from './ads-main/ads-main.component';
+import { CategoriesComponent } from './categories/categories.component';
 
 
 
 @NgModule({
-  declarations: [ HeaderComponent, SearchBarComponent, AdsMainComponent ],
-  exports: [ HeaderComponent, SearchBarComponent, AdsMainComponent ],
+  declarations: [ HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent ],
+  exports: [ HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent ],
   imports: [
     CommonModule,
     IonicModule

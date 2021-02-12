@@ -1,0 +1,14 @@
+<ion-list-header>
+  <ion-label>Categorías</ion-label>
+  <ion-buttons>
+    <ion-button href=""> Ver todos </ion-button>
+  </ion-buttons>
+</ion-list-header>
+<ion-slides [options]="slidesOptions" *ngIf="categorias.length" >
+  <ion-slide *ngFor="let categoria of categorias" >
+    <ion-card>
+      <ion-img [src]="categoria.icono"></ion-img>
+      <ion-label>{{categoria.nombre}}</ion-label>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
