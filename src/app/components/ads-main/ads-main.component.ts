@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-ads-main',
@@ -7,10 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdsMainComponent implements OnInit {
 
+  @ViewChild('adsMain') mainSlides: IonSlides;
+
   slidesOptions = {
     initialSlide: 0,
     speed: 300,
-    freeMode: true,
     slidesPerView: 1.1,
     autoplay:true
   };
@@ -18,5 +20,17 @@ export class AdsMainComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  ionViewWillLeave(){
+    this.mainSlides.stopAutoplay();
+  }
+  
+  ionViewDidEnter() {
+  this.mainSlides.startAutoplay();
+  }
+
+  afterslidesLoad() {
+    this.mainSlides.startAutoplay();
+  }
 
 }
