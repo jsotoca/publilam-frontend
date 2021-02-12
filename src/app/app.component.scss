@@ -4,7 +4,7 @@ ion-tab-bar {
     position: absolute;
     bottom: 0;
     width: 90%;
-    --background: #242D3A;  /* fallback for old browsers */
+    --background:  var(--ion-color-tertiary);
     align-self: center;
     border-radius: 20px;
     margin-bottom: 10px;
