@@ -1,0 +1,95 @@
+ion-list-header {
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--ion-color-tertiary);
+}
+
+ion-card {
+    // background: #F7F8F1 !important;
+    border-radius: 15px !important;
+    padding: 10px;
+    box-shadow:none !important;
+    // font-family: "Poppins Light";
+    // font-size: 11px;
+}
+
+.detalle {
+    border: none 0px !important;
+    padding-left: 10px;
+}
+
+ion-button {
+    background: var(--ion-color-tertiary);
+    color: whitesmoke;
+    border-radius: 5px;
+    text-transform: none;
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.img-business {
+    border-top-right-radius: 25px !important;
+    border-top-left-radius: 25px !important;
+    border-bottom-right-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
+}
+
+.titulo {
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--ion-color-tertiary);
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+.delivery {
+    font-family: "Poppins Medium";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    color: var(--ion-color-tertiary);
+    margin-top: 1px;
+    margin-bottom: 7px;
+}
+
+.icono {
+    font-size: 15px;
+}
+
+.categorias-detalles {
+    font-family: "Poppins Medium";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18px;
+    margin-top: 8px;
+    margin-bottom: 4px;
+}
+
+.categoria {
+    background: var(--ion-color-primary);
+    font-family: "Poppins Light";
+    color: var(--ion-color-light);
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 5px;
+}
+
+.subcategoria {
+    background: #4CAF50;
+    font-family: "Poppins Light";
+    color: var(--ion-color-light);
+    border-radius: 5px;
+    padding: 3px;
+    margin-right: 5px;
+}

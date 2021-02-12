@@ -1,0 +1,25 @@
+<ion-list-header>
+  <ion-label>Negocios recientes</ion-label>
+  <ion-buttons>
+    <ion-button href="">Ver todos</ion-button>
+  </ion-buttons>
+</ion-list-header>
+<ion-slides [options]="slidesOptions" >
+  <ion-slide>
+    <ion-card>
+      <img class="img-business" src="../../../assets/recents/pardo.jpg">
+      <div class="detalle ion-text-left">
+        <p class="titulo">Pardos chicken</p>
+        <p class="delivery">tiene delivery <ion-icon class="icono" name="bicycle-outline"></ion-icon>  </p>
+        <div class="categorias-detalles">
+          <span class="categoria">
+            <ion-label>Comida</ion-label>
+          </span>
+          <span class="subcategoria">
+            <ion-label>Fast food</ion-label>
+          </span>
+        </div>
+      </div>
+    </ion-card>
+  </ion-slide>
+</ion-slides>
