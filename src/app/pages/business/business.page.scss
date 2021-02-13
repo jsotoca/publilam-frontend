@@ -1,0 +1,25 @@
+.instrucciones {
+    font-family: "Poppins Light";
+    text-justify: auto;
+}
+
+ion-list-header {
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--ion-color-tertiary);
+}
+
+ion-button {
+    background: var(--ion-color-tertiary);
+    color: whitesmoke;
+    border-radius: 5px;
+    text-transform: none;
+    font-family: "Poppins Regular";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
