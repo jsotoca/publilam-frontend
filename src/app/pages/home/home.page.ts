@@ -7,6 +7,7 @@ import { Component, ViewChild } from '@angular/core';
 })
 export class HomePage {
 
+  @ViewChild('header') header;
   @ViewChild('adsMain') adsMain;
 
   constructor() {}
@@ -17,6 +18,7 @@ export class HomePage {
   }
 
   ionViewDidEnter(){
+    this.header.loadLocation();
     this.adsMain.autoplay();
   }
 

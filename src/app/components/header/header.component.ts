@@ -23,8 +23,9 @@ export class HeaderComponent implements OnInit {
 
   async saveLocation(){
     try {
-      await this.location.saveCurrentPosition();
-      this.loadLocation();
+      // await this.location.saveCurrentPosition();
+      // this.loadLocation();
+      this.ui.showAlertConfirm('Ubicar tu posición', `Ya te encuentras en ${this.district}, ¿deseas activar tu posición?`);
     } catch (error) {
       this.ui.showToast('Ocurrio un error obteniendo tu ubicación.', 1500);
     }
