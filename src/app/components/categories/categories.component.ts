@@ -13,7 +13,7 @@ export class CategoriesComponent implements OnInit {
   slidesOptions = {
     initialSlide: 0,
     direction: 'horizontal',
-    slidesPerView: 3.7,
+    slidesPerView: 3.5,
     freMode: true
   };
 

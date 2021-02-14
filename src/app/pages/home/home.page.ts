@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +7,17 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  @ViewChild('adsMain') adsMain;
+
   constructor() {}
+
+
+  ionViewWillLeave(){
+    this.adsMain.stopAutoplay();
+  }
+
+  ionViewDidEnter(){
+    this.adsMain.autoplay();
+  }
 
 }

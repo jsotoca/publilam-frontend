@@ -21,16 +21,13 @@ export class AdsMainComponent implements OnInit {
 
   ngOnInit() {}
 
-  ionViewWillLeave(){
+  stopAutoplay(){
     this.mainSlides.stopAutoplay();
   }
-  
-  ionViewDidEnter() {
-  this.mainSlides.startAutoplay();
-  }
 
-  afterslidesLoad() {
+  autoplay() {
     this.mainSlides.startAutoplay();
   }
+
 
 }
