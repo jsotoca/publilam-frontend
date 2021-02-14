@@ -25,7 +25,6 @@ export class LocationService {
     try {
       this.myCoords = await this.searchCurrentPosition();
       this.myDistrict = (await this.searchUbigeoData()).address_components[3].long_name;
-      console.log(this.myDistrict);
     } catch (error) {
       console.log(error);
     }
