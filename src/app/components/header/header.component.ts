@@ -9,15 +9,24 @@ import { LocationService } from 'src/app/services/location.service';
 export class HeaderComponent implements OnInit {
 
   @Input() showSearchBar: boolean = false;
-
+  district: string = '';
+  
   constructor(
     private location: LocationService
   ) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadLocation();
+  }
 
-  saveLocation(){
-    this.location.saveCurrentPosition();
+  async saveLocation(){
+    await this.location.saveCurrentPosition();
+    this.loadLocation();
+  }
+
+  async loadLocation(){
+    const location = this.location.myCurrentPosition.myDistrict;
+    if(location) this.district = location;
   }
 
 }

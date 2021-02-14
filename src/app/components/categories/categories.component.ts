@@ -24,7 +24,6 @@ export class CategoriesComponent implements OnInit {
 
   async ngOnInit() {
     this.categorias = await this.categoryService.getAllCategories();
-    console.log(this.categorias);
   }
 
 }
