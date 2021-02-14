@@ -1,5 +1,7 @@
 {
   "name": "publilam",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }

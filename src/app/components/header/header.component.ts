@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { LocationService } from 'src/app/services/location.service';
 
 @Component({
   selector: 'app-header',
@@ -9,8 +10,14 @@ export class HeaderComponent implements OnInit {
 
   @Input() showSearchBar: boolean = false;
 
-  constructor() { }
+  constructor(
+    private location: LocationService
+  ) { }
 
   ngOnInit() {}
+
+  saveLocation(){
+    this.location.saveCurrentPosition();
+  }
 
 }
