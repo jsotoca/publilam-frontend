@@ -1,3 +1,5 @@
+import { OptionsSearchModalPage } from './../options-search-modal/options-search-modal.page';
+import { UiService } from 'src/app/services/ui.service';
 import { Component, ViewChild } from '@angular/core';
 
 @Component({
@@ -21,5 +23,7 @@ export class HomePage {
     this.header.loadLocation();
     this.adsMain.autoplay();
   }
+
+  
 
 }

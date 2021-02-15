@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AlertController, ToastController } from '@ionic/angular';
+import { AlertController, ModalController, ToastController } from '@ionic/angular';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +8,8 @@ export class UiService {
 
   constructor(
     public toastController: ToastController,
-    public alertController: AlertController
+    public alertController: AlertController,
+    public modalController: ModalController
   ) { }
 
   async showToast(message: string, duration: number){
@@ -46,6 +47,14 @@ export class UiService {
   
       await alert.present();
     })
+  }
+
+  async showModal(component: any){
+    const modal = await this.modalController.create({
+      component,
+      cssClass: 'my-custom-class'
+    });
+    return await modal.present();
   }
 
 }

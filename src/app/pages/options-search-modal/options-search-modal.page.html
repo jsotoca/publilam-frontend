@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title class="ion-text-center title">Opciones de búsqueda</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="dismiss()">
+        <ion-icon color="danger" slot="icon-only" name="close-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid fixed>
+    <ion-row>
+      <ion-col size="12">
+        <ion-list>
+          <ion-list-header>
+            <ion-label>
+              Selecciona tus preferencias
+            </ion-label>
+          </ion-list-header>
+        
+          <ion-item>
+            <ion-label>Distrito</ion-label>
+            <ion-select placeholder="Seleccionar" okText="Aceptar" cancelText="Cancelar">
+              <ion-select-option value="f">Female</ion-select-option>
+              <ion-select-option value="m">Male</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+          <ion-item>
+            <ion-label>Categoría</ion-label>
+            <ion-select  placeholder="Seleccionar" okText="Aceptar" cancelText="Cancelar">
+              <ion-select-option value="brown">Brown</ion-select-option>
+              <ion-select-option value="blonde">Blonde</ion-select-option>
+              <ion-select-option value="black">Black</ion-select-option>
+              <ion-select-option value="red">Red</ion-select-option>
+            </ion-select>
+          </ion-item>
+        
+        </ion-list>
+        <ion-button color="success" expand="full"> 
+          Guardar preferencias 
+          <ion-icon slot="end" name="save-outline"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

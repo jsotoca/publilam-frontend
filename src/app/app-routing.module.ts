@@ -27,6 +27,10 @@ const routes: Routes = [
     path: 'account',
     loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
   },
+  {
+    path: 'options-search-modal',
+    loadChildren: () => import('./pages/options-search-modal/options-search-modal.module').then( m => m.OptionsSearchModalPageModule)
+  },
 ];
 
 @NgModule({
