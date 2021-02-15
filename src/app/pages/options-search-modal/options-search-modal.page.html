@@ -1,6 +1,6 @@
 <ion-header>
   <ion-toolbar class="header">
-    <ion-title class="ion-text-center title">Opciones de búsqueda</ion-title>
+    <ion-title class="ion-text-center title">Búsqueda Filtrada</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="dismiss()">
         <ion-icon color="danger" slot="icon-only" name="close-outline"></ion-icon>
@@ -15,22 +15,22 @@
       <ion-col size="12">
         <ion-list>
           <ion-list-header>
-            <ion-label>
-              Selecciona tus preferencias
+            <ion-label class="instrucciones ion-text-wrap">
+              Selecciona tus preferencias de búsqueda, puedes buscar por distrito y/o categoría.
             </ion-label>
           </ion-list-header>
         
           <ion-item>
-            <ion-label>Distrito</ion-label>
-            <ion-select placeholder="Seleccionar" okText="Aceptar" cancelText="Cancelar">
-              <ion-select-option value="f">Female</ion-select-option>
+            <ion-label class="ion-select-title">Distrito</ion-label>
+            <ion-select interface="popover" placeholder="Seleccionar" class="ion-select-placeholder custom-options">
+              <ion-select-option class="rojo" value="f">Female</ion-select-option>
               <ion-select-option value="m">Male</ion-select-option>
             </ion-select>
           </ion-item>
         
           <ion-item>
-            <ion-label>Categoría</ion-label>
-            <ion-select  placeholder="Seleccionar" okText="Aceptar" cancelText="Cancelar">
+            <ion-label class="ion-select-title">Categoría</ion-label>
+            <ion-select interface="popover" placeholder="Seleccionar" class="ion-select-placeholder">
               <ion-select-option value="brown">Brown</ion-select-option>
               <ion-select-option value="blonde">Blonde</ion-select-option>
               <ion-select-option value="black">Black</ion-select-option>
@@ -39,10 +39,14 @@
           </ion-item>
         
         </ion-list>
-        <ion-button color="success" expand="full"> 
-          Guardar preferencias 
-          <ion-icon slot="end" name="save-outline"></ion-icon>
-        </ion-button>
+        <div class="ion-text-center">
+          <ion-button class="btn-save" color="success"> 
+            <ion-icon slot="start" color="light" name="flame"></ion-icon>
+            <ion-label class="label-save">
+              Mostrar negocios
+            </ion-label>
+          </ion-button>
+        </div>
       </ion-col>
     </ion-row>
   </ion-grid>

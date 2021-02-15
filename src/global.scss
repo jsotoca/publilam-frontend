@@ -34,6 +34,7 @@
     }
 }
 
+//Estilo Modal
 .my-custom-class .modal-wrapper {
   height: 50%;
   width: 80%;
@@ -42,4 +43,9 @@
   position: absolute;
   display: block;
   border-radius: 2%;
+}
+
+// Estilo seleccion popover
+.sc-ion-select-popover {
+  font-family: "Poppins Medium" !important;
 }

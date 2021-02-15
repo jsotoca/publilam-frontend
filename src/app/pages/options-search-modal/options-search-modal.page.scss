@@ -3,7 +3,44 @@
 }
 
 .title {
-    font-family: "Poppins Regular";
-    font-size: 17px;
-    color: whitesmoke;
+  font-family: "Poppins Regular";
+  color: whitesmoke;
+  font-size: 15px;
 }
+
+.instrucciones {
+  font-family: "Poppins Regular";
+  font-size: 15px;
+  margin-bottom: 15px;
+}
+
+.ion-select-title {
+  font-family: "Poppins Bold" !important;
+  font-size: 15px !important;
+}
+
+.ion-select-placeholder {
+  font-family: "Poppins Medium" !important;
+  font-size: 15px !important;
+}
+
+.btn-save {
+  --border-radius: 5px !important;
+  text-transform: none !important;
+  width: 100% !important;
+  margin-top: 20px;
+}
+
+.label-save {
+  font-family: "Poppins Medium";
+  color: whitesmoke !important;
+}
+
+
+
+
+
+
+
+
+
