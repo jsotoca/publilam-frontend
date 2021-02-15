@@ -1,43 +1,16 @@
-<app-header></app-header>
+<app-header showSearchBar="true" #header></app-header>
 
-<ion-content>
-    <app-search-bar></app-search-bar>
-    <div id="businessMap" style="height:400px"></div>
-    <!-- <ion-grid fixed>
-        <ion-row>
-            <ion-col style="padding-left: 15px;" size="12">
-                <ion-label class="instrucciones ion-text-wrap">Ingresa tu busquedad, si deseas una busqueda más exacta activa el botón del mapa al costado derecho.</ion-label>
-            </ion-col>
-        </ion-row>
-    </ion-grid> -->
+<ion-content [fullscreen]="true">
     <ion-grid fixed>
-        <ion-row>
-            <ion-col size="12">
-                <ion-list-header>
-                    <ion-label>Busquedad:</ion-label>
-                    <ion-button>comida</ion-button>
-                </ion-list-header>
+        <ion-row *ngIf="categories.length" >
+            <ion-col *ngFor="let category of categories; let i = index"  size="6">
+                <ion-card [ngStyle]="{'background': categoriesColor[i] }">
+                    <!-- <ion-icon class="icon" name="fast-food-outline"></ion-icon> -->
+                    <ion-label class="number">{{ (i+1) * 13 }}</ion-label>
+                    <ion-label>{{category.nombre}}</ion-label>
+                </ion-card>
             </ion-col>
         </ion-row>
-        <ion-row>
-            <ion-col size="12">
-                <ion-card>
-                    <img class="img-business" src="../../../assets/recents/pardo.jpg">
-                    <div class="detalle ion-text-left">
-                      <p class="titulo">Pardos chicken</p>
-                      <p class="delivery">tiene delivery <ion-icon class="icono" name="bicycle-outline"></ion-icon>  </p>
-                      <div class="categorias-detalles">
-                        <span class="categoria">
-                          <ion-label>Comida</ion-label>
-                        </span>
-                        <span class="subcategoria">
-                          <ion-label>Fast food</ion-label>
-                        </span>
-                      </div>
-                    </div>
-                  </ion-card>
-            </ion-col>
-        </ion-row>
-        <div style="height: 140px;"></div>
     </ion-grid>
+<div style="margin-top: 65px;"></div>
 </ion-content>

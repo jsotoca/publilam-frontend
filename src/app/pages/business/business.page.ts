@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {Map,tileLayer,marker} from 'leaflet';
+import { Categoria } from 'src/app/interfaces/category.interface';
+import { CategoryService } from 'src/app/services/category.service';
 @Component({
   selector: 'app-business',
   templateUrl: './business.page.html',
@@ -7,27 +8,31 @@ import {Map,tileLayer,marker} from 'leaflet';
 })
 export class BusinessPage implements OnInit {
 
-  map:Map;
-  newMarker:any;
-  address:string[];
+  categories: Categoria[] = [];
+  categoriesColor: string[] = [
+    'var(--main-bg-1)',
+    'var(--main-bg-2)',
+    'var(--main-bg-3)',
+    'var(--main-bg-4)',
+    'var(--main-bg-5)',
+    'var(--main-bg-6)',
+    'var(--main-bg-7)',
+    'var(--main-bg-8)',
+    'var(--main-bg-9)',
+    'var(--main-bg-10)',
+    'var(--main-bg-11)',
+    'var(--main-bg-12)',
+    'var(--main-bg-13)',
+    'var(--main-bg-14)',
+    'var(--main-bg-15)',
+  ];
 
-  constructor() { }
+  constructor(
+    private categoryService:CategoryService
+  ) { }
 
-  ngOnInit() {
-  }
-
-  ionViewDidEnter(){
-    if(!this.map) this.loadMap();
-  }
-
-  loadMap(){
-    this.map = new Map("businessMap").setView([-6.7662462,-79.8435701], 16);
-    this.map.scrollWheelZoom.disable();
-    tileLayer(
-      'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-      { attribution: `Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>`}
-    )
-    .addTo(this.map);
+  async ngOnInit() {
+    this.categories = await this.categoryService.getAllCategories();
   }
 
 }
