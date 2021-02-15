@@ -67,6 +67,24 @@
   --ion-color-light-tint: #f5f6f9;
 }
 
+
+.alert-confirm {
+  font-family: "Poppins Medium";
+}
+
+.alert-button-confirm {
+  font-family: "Poppins Medium";
+  font-size: 15px !important;
+  text-transform: none !important;
+  color: var(--ion-color-primary) !important;
+}
+
+.alert-button-cancel {
+  font-family: "Poppins Medium";
+  font-size: 15px !important;
+  text-transform: none !important;
+  color: var(--ion-color-medium) !important;
+}
 // @media (prefers-color-scheme: dark) {
 //   /*
 //    * Dark Colors

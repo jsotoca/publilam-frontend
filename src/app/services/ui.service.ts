@@ -20,29 +20,32 @@ export class UiService {
   }
 
   async showAlertConfirm(header: string, message: string) {
-    const alert = await this.alertController.create({
-      cssClass: 'my-custom-class',
-      header,
-      message,
-      buttons: [
-        {
-          text: 'Aceptar',
-          handler: () => {
-            console.log('Confirm Okay');
+    return new Promise<boolean>( async (resolve, reject) => {
+      const alert = await this.alertController.create({
+        cssClass: 'alert-confirm',
+        header,
+        message,
+        buttons: [
+          {
+            text: 'Aceptar',
+            cssClass: 'alert-button-confirm',
+            handler: () => {
+              resolve(true);
+            }
+          }, {
+            
+            text: 'Cancelar',
+            role: 'cancel',
+            cssClass: 'alert-button-cancel',
+            handler: () => {
+              resolve(false);
+            }
           }
-        }, {
-          
-          text: 'Cancelar',
-          role: 'cancel',
-          cssClass: 'secondary',
-          handler: (blah) => {
-            console.log('Confirm Cancel: blah');
-          }
-        }
-      ]
-    });
-
-    await alert.present();
+        ]
+      });
+  
+      await alert.present();
+    })
   }
 
 }
