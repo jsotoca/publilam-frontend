@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { NavigationExtras, Router } from '@angular/router';
 import { Categoria } from 'src/app/interfaces/category.interface';
 import { CategoryService } from 'src/app/services/category.service';
 @Component({
@@ -37,8 +37,13 @@ export class BusinessPage implements OnInit {
     this.categories = await this.categoryService.getAllCategories();
   }
 
-  async goCategory(id: string){
-    this.router.navigate(['category',id]);
+  async goCategory(category: Categoria){
+    let navigationExtras: NavigationExtras = {
+      state: {
+        category
+      }
+    };
+    this.router.navigate(['category',category.id_categoria], navigationExtras);
   }
 
 }

@@ -3,6 +3,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subcategoria } from 'src/app/interfaces/subcategory.interface';
 import { UiService } from 'src/app/services/ui.service';
+import { CategoryService } from 'src/app/services/category.service';
+import { Categoria } from 'src/app/interfaces/category.interface';
 
 @Component({
   selector: 'app-category',
@@ -12,6 +14,7 @@ import { UiService } from 'src/app/services/ui.service';
 export class CategoryPage implements OnInit {
 
   id: string = null;
+  category: Categoria = null;
   subcategories: Subcategoria[] = [];
   subcategoriesColor: string[] = [
     'var(--main-bg-1)',
@@ -33,6 +36,7 @@ export class CategoryPage implements OnInit {
 
   constructor(
     public activatedRoute: ActivatedRoute,
+    public categoryService:CategoryService,
     public subcategoryService:SubcategoryService,
     public ui:UiService
   ) { }
@@ -41,13 +45,15 @@ export class CategoryPage implements OnInit {
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
   }
 
-  async ngOnInit() {
-    this.getId();
-    this.subcategories = await this.subcategoryService.getSubcategoriesByCategory(this.id);
+  async getCategory(){
+    this.category = await this.categoryService.searchCategory(this.id);
   }
 
-  async loadColor(i){
-    console.log(this.ui.loadColors(i));
+
+  async ngOnInit() {
+    this.getId();
+    this.getCategory();
+    this.subcategories = await this.subcategoryService.getSubcategoriesByCategory(this.id);
   }
 
 }

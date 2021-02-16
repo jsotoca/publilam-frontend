@@ -9,3 +9,8 @@ export interface Categoria {
   icono: string;
   portada: string;
 }
+
+export interface CategorySearchResponse {
+  categoria: Categoria;
+}
+
