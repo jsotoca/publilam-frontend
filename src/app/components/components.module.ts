@@ -1,3 +1,4 @@
+import { MapComponent } from './map/map.component';
 import { HeaderComponent } from './header/header.component';
 import { IonicModule } from '@ionic/angular';
 import { NgModule } from '@angular/core';
@@ -10,8 +11,14 @@ import { RecentsBusinessComponent } from './recents-business/recents-business.co
 
 
 @NgModule({
-  declarations: [ HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent, RecentsBusinessComponent ],
-  exports: [ HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent, RecentsBusinessComponent ],
+  declarations: [ 
+    HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent, 
+    RecentsBusinessComponent, MapComponent 
+  ],
+  exports: [ 
+    HeaderComponent, SearchBarComponent, AdsMainComponent, CategoriesComponent, 
+    RecentsBusinessComponent, MapComponent 
+  ],
   imports: [
     CommonModule,
     IonicModule
