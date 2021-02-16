@@ -4,7 +4,7 @@
     <ion-grid fixed>
         <ion-row *ngIf="categories.length" >
             <ion-col *ngFor="let category of categories; let i = index"  size="6">
-                <ion-card [ngStyle]="{'background': categoriesColor[i] }">
+                <ion-card [ngStyle]="{'background': categoriesColor[i] }" (click)="goCategory(category.id_categoria)">
                     <!-- <ion-icon class="icon" name="fast-food-outline"></ion-icon> -->
                     <ion-label class="number">{{ (i+1) * 13 }}</ion-label>
                     <ion-label>{{category.nombre}}</ion-label>

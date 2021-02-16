@@ -49,3 +49,13 @@
 .sc-ion-select-popover {
   font-family: "Poppins Medium" !important;
 }
+
+//Estilo de list header 
+ion-list-header {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--ion-color-tertiary);
+}

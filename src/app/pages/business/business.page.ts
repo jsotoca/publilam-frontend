@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Categoria } from 'src/app/interfaces/category.interface';
 import { CategoryService } from 'src/app/services/category.service';
 @Component({
@@ -28,11 +29,16 @@ export class BusinessPage implements OnInit {
   ];
 
   constructor(
-    private categoryService:CategoryService
+    private categoryService:CategoryService,
+    private router:Router
   ) { }
 
   async ngOnInit() {
     this.categories = await this.categoryService.getAllCategories();
+  }
+
+  async goCategory(id: string){
+    this.router.navigate(['category',id]);
   }
 
 }

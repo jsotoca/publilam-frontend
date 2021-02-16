@@ -31,6 +31,10 @@ const routes: Routes = [
     path: 'options-search-modal',
     loadChildren: () => import('./pages/options-search-modal/options-search-modal.module').then( m => m.OptionsSearchModalPageModule)
   },
+  {
+    path: 'category/:id',
+    loadChildren: () => import('./pages/category/category.module').then( m => m.CategoryPageModule)
+  },
 ];
 
 @NgModule({

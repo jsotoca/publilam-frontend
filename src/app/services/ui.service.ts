@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { AlertController, ModalController, ToastController } from '@ionic/angular';
+import { categoriesColor } from '../helpers/style.helper';
 
 @Injectable({
   providedIn: 'root'
@@ -55,6 +56,11 @@ export class UiService {
       cssClass: 'my-custom-class'
     });
     return await modal.present();
+  }
+
+  loadColors(i: number): string{
+    if(i>15) i = i%15;
+    return categoriesColor[i];
   }
 
 }
